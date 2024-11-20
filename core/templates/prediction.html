@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LoanEase - Prediction Result</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="prediction-container">
+      <h1>Loan Prediction Result</h1>
+      <!-- Dynamic Result Message -->
+      <p>
+        {% if status == "Approved" %}
+        Congratulations, {{ name }}! Your loan has been approved.
+        <br />
+        Account Number: {{ account_number }}
+        {% else %}
+        Unfortunately, {{ name }}, your loan has not been approved.
+        <br />
+        Account Number: {{ account_number }}
+        {% endif %}
+      </p>
+
+      <!-- Additional Information (Optional) -->
+      {% if additional_info %}
+      <p>{{ additional_info }}</p>
+      {% endif %}
+
+      <a href="/" class="btn">Back to Home</a>
+    </div>
+  </body>
+</html>
