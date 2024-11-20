@@ -233,6 +233,6 @@ This project is open-source and available under the MIT License.
 
 ## CONTACT
 
-- Author: Jahid Hasan
-- GitHub: [msjahid (Jahid Hasan) · GitHub](https://github.com/msjahid)
-- Email: [msjahid.ai@gmail.com](mailto:msjahid.ai@gmail.com)
+- **Author**: Jahid Hasan
+- **GitHub**: [https://github.com/msjahid](https://github.com/msjahid)
+- **Email**: [msjahid.ai@gmail.com](mailto:msjahid.ai@gmail.com)
