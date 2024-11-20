@@ -167,15 +167,21 @@ Railway provides a unique URL (e.g., [https://loanease-app.up.railway.app/](http
 - Displays the loan application form.
 - Includes input fields for Name, Account Number, Income, etc.
 
+  ![Home Page](project_images/home.png)
+
 ### 2. Loan Prediction Page
 
 - Displays the loan prediction result.
 - Shows personalized messages based on prediction status.
 
+![Prediction Page](project_images/prediction.png)
+
 ### 3. Error Page
 
 - Displays descriptive error messages for invalid inputs.
 - Includes a visual illustration for better UX.
+
+![Error Page](project_images/error.png)
 
 ## EXAMPLE WORKFLOW
 
