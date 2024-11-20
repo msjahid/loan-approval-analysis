@@ -9,7 +9,7 @@ services:
       - "4000:4000" # Exposes the container's port 4000 to the host machine's port 4000
     environment:
       - FLASK_APP=app.py
-      - FLASK_ENV=development # Enable development mode for live reloading
+      - FLASK_ENV=production # Enable development mode for live reloading
       - FLASK_DEBUG=1 # Ensure debug mode is enabled
     volumes:
       - .:/app # Mounts the current directory to the /app directory in the container

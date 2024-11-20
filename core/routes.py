@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 from core.models import load_model, predict
-from core.request import parse_request
+from core.request import parse_request, filter_features
 
 # Initialize the machine learning model
 model = load_model()
