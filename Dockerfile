@@ -14,4 +14,4 @@ ENV FLASK_ENV=production
 
 EXPOSE 4000
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=4000"]
+CMD ["gunicorn", "-b", "0.0.0.0:4000", "app:app"]
