@@ -1,17 +1,22 @@
+# Use Python 3.12 with slim Debian Bookworm
 FROM python:3.12-slim-bookworm
 
+# Set the working directory
 WORKDIR /app
 
-COPY requirements.txt ./
+# Copy the requirements.txt and install dependencies
+COPY requirements.txt ./ 
+RUN pip install --no-cache-dir -r requirements.txt
 
-
-RUN pip install -r requirements.txt
-
+# Copy the rest of the application code
 COPY . .
 
+# Set environment variables (optional, for debugging or other configurations)
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
 
-EXPOSE 4000
+# Expose the port on which the app will run
+EXPOSE 5000
 
-CMD ["gunicorn", "-b", "0.0.0.0:4000", "app:app"]
+# Run the app using Gunicorn on port 5000, binding to all interfaces
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
