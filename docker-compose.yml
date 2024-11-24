@@ -1,15 +1,13 @@
 version: "3.9"
 
 services:
-  flask-app: # This is the service name
+  flask-app:  # This is the service name
     container_name: loan-approval-app
-    build: . # Tells Docker to build the image from the Dockerfile in the current directory
-    image: msjahid/loan-approval:latest # Specifies the image name to be built and used
+    build: .  # Tells Docker to build the image from the Dockerfile in the current directory
+    image: msjahid/loan-approval:latest  # Specifies the image name to be built and used
     ports:
-      - "4000:4000" # Exposes the container's port 4000 to the host machine's port 4000
+      - "5000:5000"  # Exposes the container's port 5000 to the host machine's port 5000
     environment:
-      - FLASK_APP=app.py
-      - FLASK_ENV=production # Enable development mode for live reloading
-      - FLASK_DEBUG=1 # Ensure debug mode is enabled
+      - FLASK_ENV=production  # Set to 'production' for production mode
     volumes:
-      - .:/app # Mounts the current directory to the /app directory in the container
+      - .:/app  # Mounts the current directory to /app in the container (optional for development)
